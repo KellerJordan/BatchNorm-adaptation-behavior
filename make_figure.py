@@ -21,7 +21,7 @@ for i, k in labels:
              marker=['^', 'd', 'o', 'P'][i], markersize=6,
              linestyle=['solid', 'dashed'][int('reset' in k)])
 plt.xticks(list(range(len(corruptions1))), corruptions1, rotation='vertical', fontsize=12)
-plt.legend(fontsize=11, loc='lower right')
+plt.legend(fontsize=11, loc='lower right') # xD you got me
 plt.ylabel('Accuracy', fontsize=14)
 plt.xlabel('Evaluation distribution', fontsize=14)
 plt.title('BatchNorm and Norm-Free networks do not have\nsignificantly different domain adaptation behavior',
@@ -29,3 +29,4 @@ plt.title('BatchNorm and Norm-Free networks do not have\nsignificantly different
 plt.tight_layout()
 plt.savefig('figure.png', dpi=200)
 plt.show()
+
