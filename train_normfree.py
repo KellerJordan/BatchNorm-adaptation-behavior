@@ -264,7 +264,7 @@ def train(train_loader):
             if current_steps == total_train_steps:
                 break
 
-    torch.save(model.state_dict(), 'sd_normfree.pt')
+    torch.save(model.state_dict(), 'stuff/sd_normfree.pt')
     return model
 
 if __name__ == '__main__':

@@ -179,11 +179,11 @@ if __name__ == '__main__':
     corruptions = os.listdir('corruption_data')
 
     net_normfree = make_net_normfree()
-    normfree_path = 'sd_normfree.pt'
+    normfree_path = 'stuff/sd_normfree.pt'
     net_normfree.load_state_dict(torch.load(normfree_path))
     print(evaluate(net_normfree, test_loader))
 
-    batchnorm_path = 'sd_batchnorm.pt'
+    batchnorm_path = 'stuff/sd_batchnorm.pt'
     net_batchnorm = airbench.make_net94()
     net_batchnorm.load_state_dict(torch.load(batchnorm_path))
     print(evaluate(net_batchnorm, test_loader))
@@ -209,5 +209,5 @@ if __name__ == '__main__':
         reset_bn(net_batchnorm, tgt_loader)
         results.append(evaluate(net_batchnorm, tgt_loader))
 
-    torch.save(results, 'results.pt')
+    torch.save(results, 'stuff/results.pt')
 

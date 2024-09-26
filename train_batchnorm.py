@@ -292,7 +292,7 @@ def train(train_loader):
             scheduler1.step()
             scheduler2.step()
 
-    torch.save(model.state_dict(), 'sd_batchnorm.pt')
+    torch.save(model.state_dict(), 'stuff/sd_batchnorm.pt')
     return model
 
 if __name__ == '__main__':
